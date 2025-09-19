@@ -1,78 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name ="description" content="Car Shop Kenya - Your one-stop shop for quality vehicles.">
-        <meta name="keywords" content="Cars, Vehicles, Kenya, Car Shop, Buy Cars">
-        <meta name="author" content="Car Shop Kenya">
-        <title>🚗Car Shop Kenya</title>
-        <link rel="stylesheet" href="Styles/style.css">
-    </head> 
-    <body>
-        <aside class="sidebar" id="sidebar">
-            <h2>🚗 Car Shop</h2>
-            <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            </nav>
-        </aside>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Car Shop Kenya - Find your dream car with affordable prices, quality assurance, and excellent service in Nairobi, Kenya.">
+    <meta name="keywords" content="cars Kenya, car dealership Nairobi, buy car Kenya, Toyota Kenya, Nissan Kenya, used cars Kenya">
+    <meta name="author" content="Car Shop Kenya">
+    <title>🏎️ Car Shop Kenya - Find Your Dream Ride | Best Car Deals in Nairobi</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">🏎️ Car Shop Kenya</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-        <header>
-            <button id="toggleBtn">☰</button>
-            <h1>🏎️🚨Welcome to Car Shop Kenya</h1>
-        </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>🚨 Find Your Dream Ride</h1>
+                <p class="hero-tagline">Affordable. Reliable. Stylish.</p>
+                <p class="hero-description">Discover the best cars in Kenya with unbeatable prices, quality assurance, and exceptional customer service that puts you first.</p>
+                <a href="cars.html" class="btn btn-primary">Browse Cars Now</a>
+            </div>
+        </section>
 
-        <main>
-            <section class="hero fade-in">
-                <video autoplay muted loop playsinline>
-                    <source src="https://www.pexels.com/download/video/5992517/" type="video/mp4">
-                </video>
-                <div class="hero-content">
-                    <h2>Find Your Dream Ride</h2>
-                    <p>Affordable. Reliable. Stylish.</p>
-                    <a href="about.html" class="btn">Learn More</a>
+        <!-- Features Section -->
+    <section class="container section-padding">
+            <h2 class="text-center section-title">Why Choose Car Shop Kenya?</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>💰 Best Prices</h3>
+                    <p>We offer the most competitive prices in Kenya with flexible payment options and transparent pricing. No hidden fees, just honest deals.</p>
                 </div>
-            </section>
-            <hr><hr>
-            <section class="cars fade-in">
-                <article class="car"data-car="Sedan" data-price="2000000">
-                    <img src="https://images.pexels.com/photos/33554935/pexels-photo-33554935.jpeg" alt="Sedan">
-                    <h3>Sedan</h3><p>Ksh. 2,000,000</p><button>Select</button>
-                </article>
-                <article class="car"data-car="SUV" data-price="3500000">
-                    <img src="https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg" alt="SUV">
-                    <h3>SUV</h3><p>Ksh. 3,500,000</p><button>Select</button>
-                </article>
-                <article class="car"data-car="Sports" data-price="6000000">
-                    <img src="https://images.pexels.com/photos/3954786/pexels-photo-3954786.jpeg" alt="Sports">
-                    <h3>Sports</h3><p>Ksh. 6,000,000</p><button>Select</button>
-                </article>
-                <article class="car"data-car="Van" data-price="2500000">
-                    <img src="https://images.pexels.com/photos/27623983/pexels-photo-27623983.jpeg" alt="Van">
-                    <h3>Van</h3><p>Ksh. 2,500,000</p><button>Select</button>
-                </article>
-                <article class="car"data-car="Bus" data-price="5500000">
-                    <img src="https://images.pexels.com/photos/18029613/pexels-photo-18029613.jpeg" alt="Bus">
-                    <h3>Bus</h3><p>Ksh. 5,500,000</p><button>Select</button>
-                </article>
-                <article class="car"data-car="Mini SUV" data-price="3000000">
-                    <img src="https://images.pexels.com/photos/19868891/pexels-photo-19868891.jpeg" alt="Mini SUV">
-                    <h3>Mini SUV</h3><p>Ksh. 3,000,000</p><button>Select</button>
-                </article>
-                <article class="car"data-car="Luxury" data-price="10000000">
-                    <img src="https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg" alt="Luxury">
-                    <h3>Luxury</h3><p>Ksh. 10,000,000</p><button>Select</button>
-                </article>
-            </section>
-        </main>
+                <div class="card">
+                    <h3>🔍 Quality Assured</h3>
+                    <p>Every car undergoes thorough 150-point inspection before sale. We guarantee quality and provide detailed vehicle history reports.</p>
+                </div>
+                <div class="card">
+                    <h3>🚚 Easy Delivery</h3>
+                    <p>We deliver your dream car right to your doorstep anywhere in Kenya. Free delivery within Nairobi and affordable rates countrywide.</p>
+                </div>
+            </div>
+        </section>
 
-        <footer>
-            <p>&copy; 2025 Car Shop Kenya</p>
-        </footer>
+        <!-- Featured Cars Section -->
+    <section class="section-bg section-padding">
+            <div class="container">
+                <h2 class="text-center section-title">Featured Cars</h2>
+                <div class="grid grid-2" id="featuredCars">
+                    <div class="card car-item sedan">
+                        <div class="car-icon sedan-icon">
+                            <img src="Styles\toytoavitz.webp" alt="toyota vitz">
+                        </div>
+                        <h3>Toyota Vitz 2018</h3>
+                        <p>Excellent condition, low mileage, fuel efficient perfect for city driving. Automatic transmission, well maintained.</p>
+                        <div class="price car-price">KSh 1,200,000</div>
+                        <a href="cars.html#vitz" class="btn btn-secondary">View Details</a>
+                    </div>
+                    <div class="card car-item suv">
+                        <div class="car-icon suv-icon">
+                            <img src="Styles\Nissan-X-Trail-EU-Spec-main.jpg" alt="nissan xtrail">
+                        </div>
+                        <h3>Nissan X-Trail 2019</h3>
+                        <p>Perfect family SUV with spacious interior, advanced safety features, and excellent fuel economy. Well maintained with service history.</p>
+                        <div class="price car-price">KSh 2,800,000</div>
+                        <a href="cars.html#xtrail" class="btn btn-secondary">View Details</a>
+                    </div>
+                    <div class="card car-item sedan">
+                        <div class="car-icon sedan-icon">
+                            <img src="Styles\hondacivic.webp" alt="honda civic">
+                        </div>
+                        <h3>Honda Civic 2020</h3>
+                        <p>Sports sedan with premium features, turbocharged engine, and modern tech. Low mileage, single owner, immaculate condition.</p>
+                        <div class="price car-price">KSh 2,200,000</div>
+                        <a href="cars.html#civic" class="btn btn-secondary">View Details</a>
+                    </div>
+                    <div class="card car-item commercial">
+                        <div class="car-icon commercial-icon">
+                            <img src="Styles\listing_main_Toyota_Hiace_2017_in_Sharjah_1395397_6.jpg" alt="toyota hiace">
+                        </div>
+                        <h3>Toyota Hiace 2017</h3>
+                        <p>Commercial van perfect for business use. Excellent condition, powerful engine, spacious cargo area. Great investment vehicle.</p>
+                        <div class="price car-price">KSh 3,500,000</div>
+                        <a href="cars.html#hiace" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="cars.html" class="btn btn-primary">View All Cars</a>
+                </div>
+            </div>
+        </section>
 
-        <script src="Scripts/script.js"></script>
-    </body>
+        <!-- Call to Action Section -->
+    <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Ready to Find Your Perfect Car?</h2>
+                <p class="cta-desc">
+                    Join thousands of satisfied customers who found their dream cars with us. 
+                    Our expert team is ready to help you make the right choice.
+                </p>
+                <div class="cta-btns">
+                    <a href="cars.html" class="btn btn-primary">Browse Inventory</a>
+                    <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+    <section class="container newsletter-section">
+            <h2 class="newsletter-title">Stay Updated</h2>
+            <p class="newsletter-desc">Get notified about new arrivals, special offers, and car buying tips.</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                <button type="submit" class="btn btn-primary newsletter-btn">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏎️ Car Shop Kenya</h3>
+                    <p>Your trusted partner in finding the perfect vehicle. Quality cars, honest prices, exceptional service.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="about.html">About Us</a></p>
+                    <p><a href="cars.html">Our Cars</a></p>
+                    <p><a href="services.html">Services</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="services.html#financing">Car Financing</a></p>
+                    <p><a href="services.html#warranty">Extended Warranty</a></p>
+                    <p><a href="services.html#trade">Trade-In</a></p>
+                    <p><a href="services.html#maintenance">Maintenance</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 PLP, Nairobi, Kenya</p>
+                    <p>📞 +254 700 111 222</p>
+                    <p>📧 info@carshopkenya.com</p>
+                    <p>🕒 Mon-Sat: 8AM-6PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Car Shop Kenya. All rights reserved. | Designed with ❤️ for car enthusiasts</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="Scripts/script.js"></script>
+</body>
 </html>

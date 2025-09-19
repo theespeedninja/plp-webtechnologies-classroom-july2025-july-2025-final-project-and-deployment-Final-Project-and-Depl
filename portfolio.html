@@ -7,23 +7,58 @@
         <link rel="stylesheet" href="Styles/style.css">
     </head>
     <body>
-        <aside class="sidebar" id="sidebar">
-            <h2>🚗 Car Shop</h2>
-            <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            </nav>
-        </aside>
-
-        <header><button id="toggleBtn">☰</button><h1>CEO / Founder</h1></header>
+        <header>
+        <nav class="container">
+            <a href="index.html" class="logo">🏎️ Car Shop Kenya</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="cars.html" >Cars</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
         <main>
-            <section class="profile fade-in">
-            <img src="Styles\IMG-20241222-WA0038.jpg" alt="CEO">
-            <h2>DANNY NGATIA GITONGA</h2>
-            <p>Founder & CEO of Car Shop Kenya</p>
-            <p>With 15+ years in the automobile industry, John Doe has transformed the way Kenyans buy and experience cars. His leadership is built on passion, innovation, and trust.</p>
+            <section class="profile fade-in container section-padding">
+                <img src="Styles/IMG-20241222-WA0038.jpg" alt="CEO" class="ceo-img">
+                <h2 class="section-title">Danny Ngatia Gitonga</h2>
+                <p class="team-role"><strong>Founder & CEO of Car Shop Kenya</strong></p>
+                <p class="story-desc">With 15+ years in the automobile industry, Danny has transformed the way Kenyans buy and experience cars. His leadership is built on passion, innovation, and trust.</p>
+            </section>
+            <section class="container section-padding">
+                <h2 class="section-title">Achievements</h2>
+                <div class="grid grid-2 achievements-stats">
+                    <div class="achievement-card">
+                        <div class="achievement-value">5000+</div>
+                        <p class="achievement-label">Happy Customers</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-value">10+</div>
+                        <p class="achievement-label">Years Experience</p>
+                    </div>
+                </div>
+            </section>
+            <section class="container section-padding">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="grid grid-3">
+                    <div class="card value-card">
+                        <div class="value-icon">🚗</div>
+                        <h3 class="value-title">Automotive Sales</h3>
+                        <p>Expert in car sales, negotiation, and customer service.</p>
+                    </div>
+                    <div class="card value-card">
+                        <div class="value-icon">💼</div>
+                        <h3 class="value-title">Business Leadership</h3>
+                        <p>Proven track record in leading teams and growing businesses.</p>
+                    </div>
+                    <div class="card value-card">
+                        <div class="value-icon">🌟</div>
+                        <h3 class="value-title">Innovation</h3>
+                        <p>Pioneer in digital car buying and customer experience.</p>
+                    </div>
+                </div>
             </section>
         </main>
         <footer><p>&copy; 2025 Car Shop Kenya</p></footer>

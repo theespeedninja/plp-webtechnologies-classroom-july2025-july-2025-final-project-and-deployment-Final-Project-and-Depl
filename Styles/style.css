@@ -1,145 +1,798 @@
-    /* Reset */
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
-
-    body {
-    font-family: sans-serif;
-    display: flex;        /* Sidebar + content side by side */
-    min-height: 100vh;
-    }
-
-    /* Sidebar */
-    .sidebar {
-    background: linear-gradient(180deg, #ff6a00, #ee0979);
-    color: #fff;
-    padding: 1rem;
-    width: 200px;
-    transition: left .3s ease;
-    }
-    .sidebar nav a {
-    display: block;
-    color: #fff;
-    padding: .5rem 0;
-    text-decoration: none;
-    }
-    .sidebar nav a:hover {
-    color: #0ff;
-    text-shadow: 0 0 5px #0ff;
-    }
-
-    /* Header, Main, Footer */
-    header, main, footer {
-    flex: 1;
-    padding: 2rem;
-    }
-    header {
-    background: #222;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    }
-    #toggleBtn {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    }
-    footer {
-    text-align: center;
-    background: #222;
-    color: #fff;
-    }
-
-    /* Hero section with background video */
-    .hero {
-    position: relative;
-    height: 60vh;
+/* ===== EXTERNALIZED STYLES FROM INDEX.HTML ===== */
+.section-padding {
+    padding: 80px 0;
+}
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+.section-bg {
+    background: #f8f9fa;
+}
+.car-icon {
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    text-align: center;
-    overflow: hidden;
-    border-radius: 12px;
-    }
-    .hero video {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    }
-    .hero-content {
-    background: rgba(0,0,0,0.5);
-    padding: 2rem;
+    color: white;
+    font-size: 3rem;
     border-radius: 10px;
-    }
-
-    /* Cars section */
-    .cars {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    }
-    .car {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.sedan-icon img{
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    width:100%;
+    height:auto;
+}
+.suv-icon img{
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    width:100%;
+    height:auto;
+}
+.commercial-icon img{
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    width:100%;
+    height:auto;
+}
+.car-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #667eea;
+    margin: 1rem 0;
+}
+.cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,.2);
-    }
-    .car img {
-    max-width: 60%;
-    border-radius: 8px;
-    margin-bottom: .5rem;
-    }
-
-    /* Forms */
-    form {
+    padding: 80px 0;
+}
+.cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.cta-desc {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cta-btns {
     display: flex;
-    flex-direction: column;
-    gap: .8rem;
-    max-width: 400px;
-    }
-    form input, form textarea, form button {
-    padding: .6rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    }
-
-    /* Profile */
-    .profile {
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+.newsletter-section {
+    padding: 60px 0;
     text-align: center;
+}
+.newsletter-title {
+    margin-bottom: 1rem;
+}
+.newsletter-desc {
+    margin-bottom: 2rem;
+    color: #666;
+}
+.newsletter-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+}
+.newsletter-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+.newsletter-btn {
+    padding: 12px 24px;
+    border-radius: 25px;
+}
+
+/* ===== CAR SHOP KENYA - MAIN STYLES ===== */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #667eea;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #667eea;
+    background-color: rgba(102, 126, 234, 0.1);
+}
+
+/* Mobile Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    padding-top: 80px;
+    min-height: calc(100vh - 160px);
+}
+
+/* Page Headers */
+.page-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== HERO SECTION (Homepage) ===== */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: slideInUp 1s ease-out;
+}
+
+.hero-tagline {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+    animation: slideInUp 1s ease-out 0.2s both;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    animation: slideInUp 1s ease-out 0.4s both;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn-secondary:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* ===== GRIDS ===== */
+.grid {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* ===== FORMS ===== */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.success {
+    color: #27ae60;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: #667eea;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #bdc3c7;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    color: #667eea;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #34495e;
+    color: #95a5a6;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-    .profile img {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+.hidden { display: none; }
+.visible { display: block; }
+
+/* ===== RESPONSIVE DESIGN - CAR SHOP KENYA ===== */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(255, 255, 255, 0.98);
+        
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: left 0.3s ease;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: 1rem 0;
+        width: 80%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        width: 100%;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Hero Section */
+    .hero {
+        min-height: 80vh;
+        padding: 2rem 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero-tagline {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Page Headers */
+    .page-header {
+        padding: 3rem 0;
+        margin-bottom: 2rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    /* Grids */
+    .grid {
+        gap: 1rem;
+    }
+    
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Cards */
+    .card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    /* Form adjustments */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    /* Table responsiveness */
+    .table-responsive {
+        overflow-x: auto;
+    }
+    
+    table {
+        min-width: 600px;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1rem;
+    }
+    
+    .card {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+    
+    /* Stack elements vertically on very small screens */
+    .flex-mobile-stack {
+        flex-direction: column;
+    }
+    
+    .flex-mobile-stack > * {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Landscape phone styles */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .nav-links {
+        height: 100vh;
+    }
+}
+
+/* Print styles */
+@media print {
+    .nav-links,
+    .hamburger,
+    .btn,
+    footer {
+        display: none !important;
+    }
+    
+    .hero {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+    
+    .page-header {
+        padding: 2rem 0;
+        background: none !important;
+        color: #333 !important;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+    /* Optimize images and icons for retina displays */
+    .logo {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --card-bg: #2d2d2d;
+        --border-color: #404040;
+    }
+    
+    /* Uncomment to enable dark mode
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+    
+    .card {
+        background-color: var(--card-bg);
+        color: var(--text-color);
+    }
+    
+    header {
+        background: rgba(45, 45, 45, 0.98);
+    }
+    
+    .nav-links a {
+        color: var(--text-color);
+    }
+    */
+}
+
+/* ===== ABOUT.HTML EXTERNALIZED CLASSES ===== */
+.story-grid { align-items: center; gap: 4rem; }
+.story-title { color: #667eea; margin-bottom: 2rem; }
+.story-desc { font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; }
+.story-img-wrap { text-align: center; }
+.story-img video{ width: 100%; height: auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; margin: 0 auto; }
+.mission-card { text-align: center; padding: 3rem; }
+.mission-icon { font-size: 3rem; margin-bottom: 1rem; }
+.mission-title { color: #667eea; margin-bottom: 1.5rem; }
+.value-card { text-align: center; }
+.value-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.value-title { color: #667eea; }
+.team-card { text-align: center; }
+.team-img { width: 120px; height: 120px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; margin: 0 auto 1.5rem; }
+.team-img-alt { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.team-title { color: #667eea; }
+.team-role { color: #666; margin-bottom: 1rem; }
+.achievements-section { padding: 80px 0; }
+.achievements-grid { align-items: center; gap: 4rem; }
+.achievements-stats { gap: 2rem; }
+.achievement-card { text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; }
+.achievement-value { font-size: 2.5rem; color: #667eea; font-weight: bold; }
+.achievement-label { color: #666; }
+.awards-title { color: #667eea; margin-bottom: 2rem; }
+.award-item { margin-bottom: 1.5rem; }
+.award-label { color: #666; }
+
+/* CEO image for portfolio.html */
+.ceo-img {
+    width: 180px;
     border-radius: 50%;
     margin-bottom: 1rem;
-    }
+}
 
-    /* Scroll animations */
-    .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity .8s ease-out, transform .8s ease-out;
-    }
-    .fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-    }
-
-    /* Mobile: sidebar collapses */
-    @media(max-width:800px) {
-    body { display: block; }
-    .sidebar {
-    position: fixed;
-    top: 0; left: -220px;
-    width: 200px; height: 100%;
-    z-index: 1000;
-    }
-    .sidebar.active { left: 0; }
-    }
+/* Contact form textarea height */
+.contact-form-section textarea.newsletter-input {
+    height: 100px;
+}

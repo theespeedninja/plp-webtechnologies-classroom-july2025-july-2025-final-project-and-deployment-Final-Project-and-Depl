@@ -7,24 +7,43 @@
         <link rel="stylesheet" href="Styles/style.css">
     </head>
     <body>
-        <aside class="sidebar" id="sidebar">
-            <h2>🚗 Car Shop</h2>
-            <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            </nav>
-        </aside>
-
-        <header class ="fade-in"><button id="toggleBtn">☰</button><h1>Contact Us</h1></header>
-        <main class="fade-in">
-            <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-            </form>
+        <header>
+        <nav class="container">
+            <a href="index.html" class="logo">🏎️ Car Shop Kenya</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main class="fade-in container section-padding">
+            <section class="contact-info">
+                <h2 class="section-title">Contact Information</h2>
+                <p class="story-desc">We'd love to hear from you! Reach out to us using the form below or via the contact details provided.</p>
+                <div class="grid grid-2">
+                    <div class="card value-card">
+                        <h3 class="value-title">Email</h3>
+                        <p>info@carshopkenya.com</p>
+                    </div>
+                    <div class="card value-card">
+                        <h3 class="value-title">Phone</h3>
+                        <p>+254 700 123456</p>
+                    </div>
+                </div>
+            </section>
+            <section class="contact-form-section">
+                <h2 class="section-title">Send Us a Message</h2>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="Your Name" class="newsletter-input" required>
+                    <input type="email" placeholder="Your Email" class="newsletter-input" required>
+                    <textarea placeholder="Your Message" class="newsletter-input" required></textarea>
+                    <button type="submit" class="btn btn-primary newsletter-btn">Send</button>
+                </form>
+            </section>
         </main>
         <footer><p>&copy; 2025 Car Shop Kenya</p></footer>
         <script src="Scripts/script.js"></script>
